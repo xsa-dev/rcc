@@ -1,17 +1,9 @@
----
-title: Efficient execution environment isolation and caching
-menuTitle: Execution environment isolation and caching
-description: Overview of the functionality of the environment caching in RCC.
-type: article
-weight: 15
-date: 2021-06-14
----
-
 ## What is execution environment isolation and caching?
 
 Managing and isolating the execution environments is one of the biggest tasks and friction points that RCC is solving. The execution environment needs to have all the pieces in place for the robot to execute and that could mean a full setup Python environment, browsers, custom library packages, etc. In RPA solutions, "Work on my machine" just doesn't cut it.
 
 ![](https://imgs.xkcd.com/comics/python_environment.png)
+
 *Credit: [xkcd.com](https://xkcd.com/1987/)*
 
 The list of tools and techniques around just Python environment handling and package management is simply staggering: <br/>
@@ -31,6 +23,7 @@ Holotree is an environment cache that stores each unique file only once. When re
 Holotree can fit hundreds of unique environments in a small space.
 
 ![Holotree disk usage](holotree-disk-usage.png)
+
 *Note: A single execution environment can span from 200MB to >1GB*
 
 There are other significant changes and improvements in Holotree regarding [relocation](<https://en.wikipedia.org/wiki/Relocation_(computing)>) and [file locking](https://en.wikipedia.org/wiki/File_locking).
